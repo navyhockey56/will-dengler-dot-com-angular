@@ -1,1 +1,34 @@
-/* You can add global styles to this file, and also import other style files */
+.center {
+  text-align: center;
+}
+
+.padded-1 {
+  padding: 1em;
+}
+
+.padded-2 {
+  padding: 2em;
+}
+
+.top-padded-1 {
+  padding-top: 1em;
+}
+
+.not-top-padded-1 {
+  padding: 1em;
+  padding-top: 0em;
+}
+
+.bottom-padded-1 {
+  padding-bottom: 1em;
+}
+
+.is-wide {
+  min-width: 100%;
+  display: inline-block;
+}
+
+.is-tall {
+  min-height: 100%;
+  display: inline-block;
+}
