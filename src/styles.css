@@ -23,6 +23,15 @@
   padding-bottom: 1em;
 }
 
+.not-bottom-padded-1 {
+  padding: 1em;
+  padding-bottom: 0em;
+}
+
+.bottom-padded-2 {
+  padding-bottom: 1em;
+}
+
 .is-wide {
   min-width: 100%;
   display: inline-block;
