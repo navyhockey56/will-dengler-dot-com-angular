@@ -1,0 +1,63 @@
+<!-- Display the list of Heros -->
+<article class="panel is-info container">
+  <section>
+    <p class="panel-heading is-large center">Messages</p>
+  </section>
+
+<div *ngIf="!messages && !loading">
+  <section class="padded-1">
+    <div class="field">
+      <label class="label">Username</label>
+      <div class="control">
+        <input class="input" #userEmail placeholder="Your email address" type="email"/>
+      </div>
+    </div>
+
+    <div class="field">
+      <label class="label">Password</label>
+      <div class="control">
+        <input class="input" #userPassword placeholder="Your password" type="password"
+          (keydown.enter)="setCredentials(userEmail.value, userPassword.value);"
+        />
+      </div>
+    </div>
+  </section>
+
+  <section class="padded-1">
+    <div class="buttons">
+      <button class="button is-success" (click)="setCredentials(userEmail.value, userPassword.value);">Get Messages</button>
+    </div>
+  </section>
+</div>
+
+  <section *ngIf="messages && !loading" class="padded-1">
+    <div class="content">
+      <table class="table is-hoverable is-striped">
+
+        <thead>
+          <tr>
+            <th>Created At</th>
+            <th>Email</th>
+            <th>Content</th>
+          </tr>
+        </thead>
+
+        <tbody>
+          <tr *ngFor='let message of messages' routerLink={{message.path()}}>
+            <td>{{message.createdAt}}</td>
+            <td>{{message.email}}</td>
+            <td>{{message.message}}</td>
+          </tr>
+        </tbody>
+
+      </table>
+    </div>
+  </section>
+
+  <section *ngIf="messages" class="padded-1">
+    <div class="buttons">
+      <button class="button is-success" (click)="revokeCredentials();">Logout</button>
+    </div>
+  </section>
+
+</article>
