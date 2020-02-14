@@ -10,6 +10,10 @@ import { AppNavComponent } from './_components/app-nav/app-nav.component';
 import { ContactComponent } from './_components/contact/contact.component';
 import { ResumeComponent } from './_components/resume/resume.component';
 import { MessagesComponent } from './_components/messages/messages.component';
+import { AwkwardMathComponent } from './_components/_side-projects/awkward-math/awkward-math.component';
+import { SideTexterComponent } from './_components/_side-projects/side-texter/side-texter.component';
+import { RainyGemserverComponent } from './_components/_side-projects/rainy-gemserver/rainy-gemserver.component';
+import { EmeraldComponent } from './_components/_side-projects/emerald/emerald.component';
 
 @NgModule({
   declarations: [
@@ -19,7 +23,11 @@ import { MessagesComponent } from './_components/messages/messages.component';
     AppNavComponent,
     ContactComponent,
     ResumeComponent,
-    MessagesComponent
+    MessagesComponent,
+    AwkwardMathComponent,
+    SideTexterComponent,
+    RainyGemserverComponent,
+    EmeraldComponent
   ],
   imports: [
     BrowserModule,
