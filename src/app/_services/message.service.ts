@@ -52,9 +52,8 @@ export class MessageService {
 
   getMessages(): Observable<Message[]> {
     if (!this.getCredentials()) {
-      this.loggedIn = false;
       return of(null);
-    };
+    }
 
     return this.http.get<Message[]>(
       `${SERVER_HOST}/messages`,
