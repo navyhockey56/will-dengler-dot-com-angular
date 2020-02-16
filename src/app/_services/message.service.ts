@@ -36,6 +36,10 @@ export class MessageService {
     return this.credentials;
   }
 
+  loggedIn() {
+    return this.getCredentials() !== null;
+  }
+
   createMessage(message): Observable<Message> {
     return this.http.post<Message>(
       `${SERVER_HOST}/message`, message.toJson()
@@ -47,7 +51,10 @@ export class MessageService {
   }
 
   getMessages(): Observable<Message[]> {
-    if (!this.getCredentials()) { return of(null) };
+    if (!this.getCredentials()) {
+      this.loggedIn = false;
+      return of(null);
+    };
 
     return this.http.get<Message[]>(
       `${SERVER_HOST}/messages`,

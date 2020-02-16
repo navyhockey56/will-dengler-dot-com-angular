@@ -1,7 +1,7 @@
 import { environment } from '../../environments/environment';
 import { Observable, of } from 'rxjs';
 
-export const SERVER_HOST = `http://${environment.serverHost}`;
+export const SERVER_HOST = `https://${environment.serverHost}`;
 
 export function log(message : string): void {
   console.log(message);

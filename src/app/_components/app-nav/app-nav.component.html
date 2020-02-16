@@ -1,30 +1,43 @@
-<nav class="navbar container">
+<nav class="navbar container" role="navigation" aria-lable="main navigation">
 
   <div class="navbar-brand">
     <a class="navbar-item" routerLink="/"><strong>Will Dengler</strong></a>
+
+    <a (click)="menuClicked()" [className]="burgerClass" role="button" aria-label="menu" aria-expanded="false" data-target="navbarBasicExample">
+      <span aria-hidden="true"></span>
+      <span aria-hidden="true"></span>
+      <span aria-hidden="true"></span>
+    </a>
   </div>
 
-  <div class="navbar-start">
-    <a class="navbar-item" routerLink="/contact">Contact</a>
-    <a class="navbar-item" routerLink="/experience">Experiences</a>
+  <div [className]="menuClass">
+    <div class="navbar-start">
+      <a class="navbar-item" routerLink="/contact">Contact</a>
+      <a class="navbar-item" routerLink="/experience">Experiences</a>
+      <a *ngIf="loggedIn()" class="navbar-item" routerLink="/messages">Messages</a>
 
-<!--     <div class="navbar-item has-dropdown is-hoverable">
-      <a class="navbar-link">Articles</a>
-      <div class="navbar-dropdown">
-        <a class="navbar-item" routerLink="/articles/personal-websites">Personal Websites</a>
-        <a class="navbar-item" routerLink="/articles/quest-to-full-stack">Quest to Full Stack</a>
-      </div>
-    </div> -->
-
-
-    <div class="navbar-item has-dropdown is-hoverable">
-      <a class="navbar-link">Side Projects</a>
-      <div class="navbar-dropdown">
-        <a class="navbar-item" routerLink="/side-projects/awkward-math">Awkward Math</a>
-        <a class="navbar-item" routerLink="/side-projects/side-texter">Side Texter</a>
-        <a class="navbar-item" routerLink="/side-projects/rainy-gemserver">Rainy Gemserver</a>
-        <a class="navbar-item" routerLink="/side-projects/emerald-language">The Emerald Langauge</a>
+      <div class="navbar-item has-dropdown is-hoverable">
+        <a class="navbar-link">Side Projects</a>
+        <div class="navbar-dropdown">
+          <a class="navbar-item" routerLink="/side-projects/awkward-math">Awkward Math</a>
+          <a class="navbar-item" routerLink="/side-projects/side-texter">Side Texter</a>
+        </div>
       </div>
     </div>
   </div>
 </nav>
+
+<!--
+      <div class="navbar-item has-dropdown is-hoverable">
+        <a class="navbar-link">Articles</a>
+        <div class="navbar-dropdown">
+          <a class="navbar-item" routerLink="/articles/personal-websites">Personal Websites</a>
+          <a class="navbar-item" routerLink="/articles/quest-to-full-stack">Quest to Full Stack</a>
+        </div>
+      </div>
+-->
+
+<!--
+        <a class="navbar-item" routerLink="/side-projects/rainy-gemserver">Rainy Gemserver</a>
+        <a class="navbar-item" routerLink="/side-projects/emerald-language">The Emerald Langauge</a>
+-->
