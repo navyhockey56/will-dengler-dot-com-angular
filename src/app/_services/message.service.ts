@@ -40,13 +40,13 @@ export class MessageService {
     return this.getCredentials() !== null;
   }
 
-  createMessage(message): Observable<Message> {
+  createMessage(message: Message, errorHandler?): Observable<Message> {
     return this.http.post<Message>(
       `${SERVER_HOST}/message`, message.toJson()
     ).pipe(
       map( (data : any) => mapToMessage(data)),
       tap ( _ => log(`Created Message ${message.message}`)),
-      catchError(handleError<Message>('createMessage'))
+      catchError(handleError<Message>('createMessage', errorHandler))
     );
   }
 

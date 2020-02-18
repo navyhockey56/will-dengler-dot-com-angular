@@ -1,16 +1,71 @@
+<!-- Failed Message Modal -->
+<div *ngIf="failedMessage" class="modal is-active">
+  <div class="modal-background" (click)="exitFailedLogin()"></div>
+  <div class="modal-content">
+
+    <article class="panel is-warning container message">
+      <section>
+        <p class="panel-heading is-large center">Message Error</p>
+      </section>
+
+      <section class="padded-1">
+        <div class="content">
+          <p>{{errorMessage}}</p>
+        </div>
+      </section>
+
+        <section class="padded-1">
+        <div class="buttons">
+          <button class="button is-dark is-light" (click)="exitFailedMessage()">Try Again</button>
+        </div>
+      </section>
+    </article>
+
+  </div>
+</div>
+
+<!-- Success Message Modal -->
+<div *ngIf="successMessage" class="modal is-active">
+  <div class="modal-background" (click)="exitFailedLogin()"></div>
+  <div class="modal-content">
+
+    <article class="panel is-success container message">
+      <section>
+        <p class="panel-heading is-large center">Message Created!</p>
+      </section>
+
+      <section class="padded-1">
+        <div class="content">
+          <p>Your message has been successfully created!</p>
+        </div>
+      </section>
+
+        <section class="padded-1">
+        <div class="buttons">
+          <button class="button is-dark is-light" (click)="exitSuccessMessage()">Exit</button>
+        </div>
+      </section>
+    </article>
+
+  </div>
+</div>
+
+<!-- Main page body -->
 <div>
   <article class="panel is-info">
+    <!-- Page Title -->
     <div class="content">
       <h2 class="center panel-heading">Contact Me!</h2>
     </div>
 
+    <!-- Information Section -->
     <div class="content not-bottom-padded-1">
       <p>
         Want to get in touch with me? Great! I'd love to hear from you! You can drop me a message with the form below. If you'd like a response, then just include your email address and I'll do my best to get back to you quickly. If you're looking to contact me about a job or something similar, then send a message to my <a target="_blank" href="https://www.linkedin.com/in/william-dengler-a69952139/">LinkedIn</a>.
       </p>
     </div>
 
-
+    <!-- Create Message Section -->
     <section class="not-top-padded-1">
       <div class="field">
         <label class="label">Email:</label>
