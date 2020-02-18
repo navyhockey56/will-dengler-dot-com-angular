@@ -1,6 +1,10 @@
 # Will Dengler Dot Com
 Changes to willdengler.com
 
+## Unreleased
+-----------------------
+* Update: The mobile navbar to automatically collapse when a user selects an item.
+
 ## 1.1.1 - 2020-02-17
 -----------------------
 * Fixed: Contact modals background onClick function references.
