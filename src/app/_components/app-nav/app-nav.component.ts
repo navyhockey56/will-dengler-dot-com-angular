@@ -1,5 +1,4 @@
 import { Component, OnInit } from '@angular/core';
-
 import { MessageService } from '../../_services/message.service';
 
 @Component({
@@ -9,31 +8,56 @@ import { MessageService } from '../../_services/message.service';
 })
 export class AppNavComponent implements OnInit {
 
-  burgerClass = "navbar-burger burger";
-  menuClass = "navbar-menu";
-  private activeMenu = false;
+  // Sets the class on the navbar burger icon
+  burgerClass: string;
+  // Sets the class on the mobile navbar dropdown menu
+  menuClass: string;
+  // Keeps track of whether the mobile navbar menu is opened
+  private activeMenu: boolean = false;
 
   constructor(
     private messageService: MessageService
   ) { }
 
   ngOnInit() {
+    this.burgerClass = "navbar-burger burger";
+    this.menuClass = "navbar-menu";
   }
 
+  /**
+    Checks if I'm currently logged into the site
+  */
   loggedIn(): boolean {
     return this.messageService.loggedIn();
   }
 
+  /**
+    Toggles the navbar menu open/closed.
+  */
   menuClicked(): void {
     if (!this.activeMenu) {
-      this.activeMenu = true;
-      this.burgerClass = "navbar-burger burger is-active";
-      this.menuClass = "navbar-menu is-active";
+      this.openMenu();
     } else {
-      this.activeMenu = false;
-      this.burgerClass = "navbar-burger burger";
-      this.menuClass = "navbar-menu";
+      this.collapseMenu();
     }
+  }
+
+  /**
+    Opens the navbar menu (for mobile device viewing).
+  */
+  openMenu(): void {
+    this.activeMenu = true;
+    this.burgerClass = "navbar-burger burger is-active";
+    this.menuClass = "navbar-menu is-active";
+  }
+
+  /**
+    Closes the navbar menu (for mobile device viewing)
+  */
+  collapseMenu(): void {
+    this.activeMenu = false;
+    this.burgerClass = "navbar-burger burger";
+    this.menuClass = "navbar-menu";
   }
 
 }
