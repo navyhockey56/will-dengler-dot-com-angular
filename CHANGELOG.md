@@ -1,7 +1,7 @@
 # Will Dengler Dot Com
 Changes to willdengler.com
 
-## Unreleased
+## 1.1.0 - 2020-02-17
 -----------------------
 * Updating contact page to show a success popup when a message has been successfully sent; as well as an error popup when a message fails to send.
 * Updating `service-helpers#handleError` to allow for an error handler to be passed in to consume the generated error message.
