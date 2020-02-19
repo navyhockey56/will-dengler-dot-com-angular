@@ -1,6 +1,10 @@
 # Will Dengler Dot Com
 Changes to willdengler.com
 
+## Unreleased
+-----------------------
+* Update: Changing wording/phrasing/etc in experience page.
+
 ## 1.2.0 - 2020-02-18
 -----------------------
 * Update: The mobile navbar to automatically collapse when a user selects an item.
