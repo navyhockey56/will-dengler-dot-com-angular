@@ -1,7 +1,7 @@
 # Will Dengler Dot Com
 Changes to willdengler.com
 
-## Unreleased
+## 1.2.1 - 2020-02-18
 -----------------------
 * Update: Changing wording/phrasing/etc in experience page.
 
