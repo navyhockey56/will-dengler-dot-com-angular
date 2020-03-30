@@ -1,6 +1,11 @@
 # Will Dengler Dot Com
 Changes to willdengler.com
 
+## Typos 2
+-----------------------
+* Update: Fixed typo in experiences page
+* Removed: Paragraph about jar hell in Sapio section of Experiences page.
+
 ## 1.2.1 - 2020-02-18
 -----------------------
 * Update: Changing wording/phrasing/etc in experience page.
