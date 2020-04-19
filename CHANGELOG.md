@@ -1,6 +1,10 @@
 # Will Dengler Dot Com
 Changes to willdengler.com
 
+## 1.2.3 - 2020-04-29 - Side Texter Updates
+----------------------------------------------
+* Updating Side Texter article.
+
 ## 1.2.2 - 2020-02-30 - Typos 2
 ----------------------------------------------
 * Update: Fixed typo in experiences page
